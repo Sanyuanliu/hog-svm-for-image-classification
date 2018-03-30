@@ -44,7 +44,91 @@ cv::Ptr<cv::ml::SVM> model = cv::ml::SVM::create();
 	}
 
 
+	void CodePredict::Model_train()
+	{
+		
+		//cv::HOGDescriptor hog(cv::Size(48, 48), cv::Size(16, 16), cv::Size(8, 8), cv::Size(8, 8), 9);
+		//int DescriptorDim;
+		//int PosSamNO, NegSamNO, HardExampleNO;
+		//PosSamNO = 989;
+		//NegSamNO = 1634;
+		//HardExampleNO = 0;
+		//cv::Ptr<cv::ml::SVM> svm = cv::ml::SVM::create();
+		//svm->setType(cv::ml::SVM::Types::C_SVC);
+		//svm->setKernel(cv::ml::SVM::KernelTypes::LINEAR);
+		//svm->setTermCriteria(cv::TermCriteria(cv::TermCriteria::MAX_ITER, 100, 1e-6));
+		//std::string ImgName;
+ 	//	std::ifstream finPos("positive.txt");
+		//std::ifstream finNeg("negative.txt");
+ 	//	cv::Mat sampleFeatureMat;
+  //		cv::Mat sampleLabelMat;
+ 	//	for (int num = 0; num < PosSamNO && std::getline(finPos, ImgName); num++)
+		//{
+		//	cv::Mat image = cv::imread(ImgName);
+		//	cv::resize(image, image, cv::Size(48, 48));
+		//	std::vector<float> descriptors;
+		//	hog.compute(image, descriptors, cv::Size(8, 8));
+		//	if (0 == num)
+		//	{
+		//		DescriptorDim = int(descriptors.size());
+		//		sampleFeatureMat = cv::Mat::zeros(PosSamNO + NegSamNO, DescriptorDim, CV_32FC1);
+		//		sampleLabelMat = cv::Mat::zeros(PosSamNO + NegSamNO, 1, CV_32SC1);
+		//	}
+  // 
+		//	for (int i = 0; i < DescriptorDim; i++)
+		//	{
+		//		sampleFeatureMat.at<float>(num, i) = descriptors[i];
+		//	}  
+		//	sampleLabelMat.at<int>(num, 0) = 1;
+		//}
 
+  // 
+		//for (int num = 0; num < NegSamNO && getline(finNeg, ImgName); num++)
+		//{
+
+		//	cv::Mat src = cv::imread(ImgName);
+		//	cv::resize(src, src, cv::Size(48, 48));
+
+
+		//	std::vector<float> descriptors;
+ 
+		//	hog.compute(src, descriptors, cv::Size(8, 8));
+  //
+		//	for (int i = 0; i < DescriptorDim; i++)
+		//	{
+		//		sampleFeatureMat.at<float>(num + PosSamNO, i) = descriptors[i];
+		//	}
+
+		//	sampleLabelMat.at<int>(num + PosSamNO, 0) = -1;
+		//}
+
+
+		//if (HardExampleNO > 0)
+		//{
+ 
+		//	std::ifstream finHardExample("hard_samples_d.txt");
+		//	for (int num = 0; num < HardExampleNO && getline(finHardExample, ImgName); num++)
+		//	{
+		//		cv::Mat src = cv::imread(ImgName, cv::IMREAD_GRAYSCALE);
+		//		cv::resize(src, src, cv::Size(48, 48));
+		//		std::vector<float> descriptors;
+		//		hog.compute(src, descriptors, cv::Size(8, 8));
+		//		for (int i = 0; i < DescriptorDim; i++)
+		//		{
+		//			sampleFeatureMat.at<float>(num + PosSamNO + NegSamNO, i) = descriptors[i];
+		//		}
+		//		sampleLabelMat.at<float>(num + PosSamNO + NegSamNO, 0) = -1;
+		//	}
+		//}
+		//
+		//
+		//
+		//svm->train(sampleLabelMat);
+
+		//svm->save("svm.xml");
+	
+	
+	}     
 
 //#include <iostream>
 //#include <string>
