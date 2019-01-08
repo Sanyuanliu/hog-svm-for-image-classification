@@ -1,1 +1,1 @@
-# traditional-classification-methods
+# hog svm for image calssification
